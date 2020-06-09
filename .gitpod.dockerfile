@@ -8,3 +8,5 @@ RUN curl https://cli-assets.heroku.com/install.sh | sh
 RUN chown -R gitpod:gitpod /home/gitpod/.cache/heroku
 # Setup vercel
 RUN npm install -g vercel
+# Setup netlify
+RUN npm install -g netlify-cli
