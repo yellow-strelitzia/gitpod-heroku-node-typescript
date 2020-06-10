@@ -9,5 +9,9 @@ app.use((req, res, next) => {
   next()
 })
 
+app.get('/', function (req, res) {
+  res.send('Hello world!')
+})
+
 // 3000番ポートでAPIサーバ起動
 app.listen(3000,()=>{ console.log('Example app listening on port 3000!') })
