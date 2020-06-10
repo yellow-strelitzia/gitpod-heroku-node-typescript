@@ -1,17 +1,17 @@
 {
   "name": "typescript-node-base",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "dist/app.js",
   "scripts": {
-    "dev": "ts-node ./src/index.ts",
-    "dev:watch": "ts-node-dev --respawn src/index.ts",
+    "dev": "ts-node ./src/app.ts",
+    "dev:watch": "ts-node-dev --respawn src/app.ts",
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
     "start": "node ."
   },
   "keywords": [],
-  "author": "Nobutaka OSHIRO",
+  "author": "yellow-strelitzia",
   "license": "ISC",
   "description": "",
   "dependencies": {},
