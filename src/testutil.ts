@@ -71,8 +71,8 @@ export namespace TestUtil {
         power = num2;
         num2 = power;
         
-        var num3: number;
-        var str3: string;
+        let num3: number;
+        let str3: string;
 
         // These literals can be assigned to anything
         num3 = null;
@@ -117,6 +117,29 @@ export namespace TestUtil {
             // Do stuff with line: string
         }
 
+        // tuple
+        var nameNumber: [string, number];
+        // Okay
+        nameNumber = ['Jenny', 8675309];
+        // Error!
+        //nameNumber = ['Jenny', '867-5309'];
+
+        // Alias
+        type StrOrNum = string|number;
+
+        // Usage: just like any other notation
+        let aliasSample: StrOrNum;
+        aliasSample = 123;
+        aliasSample = '123';
+        // Just checking
+        //aliasSample = true; // Error!        
+
+        type Text = string | { text: string };
+        type Coordinates = [number, number];
+        type Callback = (data: string) => void;
+
+        // cheat sheet
+        //https://hoomanb.com/cs/quickref/typescript_cheatsheet.pdf
     }
 }
 
