@@ -140,6 +140,43 @@ export namespace TestUtil {
 
         // cheat sheet
         //https://hoomanb.com/cs/quickref/typescript_cheatsheet.pdf
+
+        // optional parameter
+        function foo(bar: number, bas?: string): void {
+            // ..
+        }
+        foo(123);
+        foo(123, 'hello');
+
+        function padding(a: number, b?: number, c?: number, d?: any) {
+            if (b === undefined && c === undefined && d === undefined) {
+                b = c = d = a;
+            }
+            else if (c === undefined && d === undefined) {
+                c = a;
+                d = b;
+            }
+            return {
+                top: a,
+                right: b,
+                bottom: c,
+                left: d
+            };
+        }
+
+        //fnction declaratino
+        type LongHand = {
+            (a: number): number;
+        };
+
+        type ShortHand = (a: number) => number;
+
     }
+
+    // with overload
+    type LongHandAllowsOverloadDeclarations = {
+        (a: number): number;
+        (a: string): string;
+    };    
 }
 
